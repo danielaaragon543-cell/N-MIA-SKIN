@@ -1,0 +1,1040 @@
+/* Variables en CSS */
+/* Aquí puse todos los colores que ocuparé y pondré en los códigos */
+:root {
+    --blanco: #FFFDFC;
+    --oscuro: #2C2725;
+    --CafeMedio: #8C8580;
+    --primario: #E8D8D2;
+    --secundario: #C9AAA0;
+    --CremaClaro: #F5EEEB;
+    --CremaOscuro: #E2D3CD;
+    --CafeClarito: #6B5149;
+    --rosa: #D8B9B0;
+    --crema: #F1E5DE;
+
+    /* Esta es para la tipografía, en la primera es la fuente que quiero usar y en la segunda vendría siendo lo del tamaño de la letra */
+    --fuentePrincipal: "Work Sans", sans-serif;
+    --tamanoFuente: 3.3rem;
+}
+
+/* En esta se conecta con todos los html, o sea que este vendría siendo para todo. 
+    font-size sirve para cambiar el tamaño de la letra, box-sizing me ayuda para evitar que las cajas que puse no se hagan más grandes de lo que puse, más aparte no me mueva todo lo de la página, scroll-snap-type: y mandatory este es para deslizar y que todo encaje en cada sección que puse, con esto me evito de problemas de que no encaje de manera incorrecta.
+    1rem=10px */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+/* este vendría siendo para que todo lo que puse no se agrande ni se descuadre todo lo que puse. */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Body es el cuerpo de nuestra página, font-size es el tamaño de la letra y no se vea con diferentes letras, font-family es el tipo de letra, font-weight es el grosor de la letra, background-image este sirve desvanece el fondo puse el color crema a blanco arriba y margin quita los bordes o los espacios que puse alrededor y se pegue a la orilla. */
+body {
+    font-size: 1.6rem;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    background-image: linear-gradient(to top, var(--blanco) 0%, var(--CremaClaro) 100%);
+    margin: 0;
+}
+
+/* estos son para los títulos y subtítulos, el primero es para centrarlo y h2 es para los subtítulos se vean más grandes y h3 le da los títulos que puse en las tarjetas */
+h1, h2, h3 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+/* contenedor es para mantener todo centrado aparte es para que las fotos, botones y textos no se vayan para la orilla y no se vea demasiado grande, por eso max-width es para tener un tipo límite en lo ancho de mi página y margin es para que quede a la mitad o sea que este lo usé para lo del formulario que no haya nada a los lados. */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* sombra es para que vuelen las tarjetas que dé como ese efecto, box-shadow este se encarga de poner la sombra en la parte de abajo y despegada en sí, border-radius es para redondear las esquinas de los contenedores y background-image es para el degradado de la parte de abajo del mismo, padding es el que me ayudó a que no se pegara todo a la orilla de los contenedores */
+.sombra {
+    box-shadow: 10px 17px 11px -4px rgba(0,0,0,0.15);
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, var(--CremaClaro) 0%, var(--blanco) 70%);
+    padding: 3rem;
+}
+
+/* botón: este lo puse en lo que vendría siendo el primero pues sería que le puse color al botón en sí, el padding es para el espacio y no me quede todo pegado, margin-top es para que el botón esté en la parte de abajo, text-decoration este le quita lo que pasa al principio que se le pone la raya azul este lo ocupé para los enlaces rápidos, text-transform este pone en mayúsculas el botón, border pues redondear las esquinas, width este es para que el botón esté del ancho del espacio o sea que esté bastante grande, text-align es para que el texto que puse esté en medio, border le quité lo feo que se ve sin esto, display permite que este se quede estático para que esté como lo puse anteriormente y color es pues las letras que puse, font-weight es para poner el texto en negritas para que resalte. */
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    color: var(--oscuro);
+    font-weight: 600;
+}
+
+/* este está para que cuando le pique se ponga de color, cursor es para que se pueda hacer clic y se metan a combos y background es para que cambie de color y pues el color que le asigné lo puse blanco */
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--CafeClarito);
+    color: var(--blanco);
+}
+
+/* 0.1 la parte de arriba y pues lo primero que se ve 
+font-size es tamaño de letra y margin es para los espacios y el 0 es para que esté libre de los 2 lados */
+.titulo {
+    font-size: var(--tamanoFuente);
+    margin: 2rem 0;
+}
+
+/* este está dentro de un título para que se vea distinto y por eso el tamaño de la letra */
+.titulo span {
+    font-size: 2rem;
+}
+
+/* este es la parte de arriba que puse donde está lo de los combos, pronto y los que puse y el color que puse es lo que está de fondo */
+.nav-bg {
+    background-color: var(--primario);
+}
+
+/* es la que se encuentran todos los enlaces que puse o sea en el menú, display: flex es para acomodar y alinear, flex-direction es para que los enlaces se pongan debajo de otro este es más para los teléfonos y el último es para que se alineen al centro */
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* esta es más para aplicarlas en más anchos, esta es tipo que cuando se vea en algo se vea bien, flex-direction es para que se cambien los enlaces en una sola línea horizontal, justify-content dar espacio entre cada uno, .boton este se encarga de que ya los botones no estén de 80% si no que se adapten al ancho de las cosas */
+@media (min-width: 480px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .boton {
+        width: auto;
+    }
+}
+
+/* diseño de los enlaces este es a, padding es para que sea más fácil de picarle y el color que le puse al enlace y text-decoration es quitar lo azul, transition hace que se cambie de color de manera tranquila */
+.navegacion-principal a {
+    padding: 1.5rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+/* este se encarga de que cambie de color cuando se quiera cambiar al menú, pinta la parte del fondo de café claro detrás de que le des clic, y el último es para que las letras no se pierdan de cierta manera */
+.navegacion-principal a:hover {
+    background-color: var(--secundario);
+    color: var(--blanco);
+}
+
+/* 1. INDEX */
+/* 1.1 parte de la portada hero es la imagen que está en la parte de arriba, la primera es que la imagen esté en la parte de atrás del texto, background es para que no se repita la imagen si es que la imagen está pequeña, la tercera es para que la imagen alcance a cubrir el espacio sin que se vea feo, el cuarto centra la imagen para que quede lo más importante en medio, quinto le da la altura, position es que las letras de skincare de confianza se queden estáticas, y lo último es para que le deje un espacio antes del icono que puse */
+.hero {
+    background-image: url(../img/IMGHERO.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 60rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+/* es la que está en la parte que va arriba, position es para que esté arriba como las letras, el segundo es para que se vea negro con la opacidad y que las letras que puse se vean más, width es lo que cubra todo el ancho y el otro sería lo alto, display es para que pueda acomodar el título, frase y el botón, flex-direction acomoda que esté uno abajo de otro, justify centra todo lo que está de arriba a abajo */
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* es el que puse para lo del skincare de confianza, el primero es que esté centrado, tamaño de la letra, que pinte el color de las letras en blanco y deje un espacio para que no se vea todo pegado */
+.subtitulo {
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--blanco);
+    margin-bottom: 2rem;
+}
+
+/* este es donde está lo del icono y el botón, font-weight es para que esté en negritas, el color y el tamaño de la letra */
+.place {
+    font-weight: 600;
+    color: var(--blanco);
+    font-size: 1.8rem;
+}
+
+/* 1.2 apartado de VALORES Y SERVICIOS
+es la caja donde puse los valores e iconos display es para que esté ordenada en filas y columnas, grid-template-columns este me ayudó a tener 1 sola columna que ocupa el ancho, gap es la separación entre cada tarjeta y no se vea como todas pegadas. */
+.servicios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+/* Cambia cuando se cambia de pantalla, este va a hacer que las columnas se dividan entre 3 pero que queden iguales, o sea pone una fila como tal. */
+@media (min-width: 780px) {
+    .servicios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* este es importante ya que guarda todo lo que pongo en servicios, display es para ordenar las cosas internas, flex-direction que el círculo, el texto y el título se vean de arriba para abajo, centra todo en medio */
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* es donde se encuentra el icono, altura, ancho, parte de atrás de qué color lo puse, redondear las orillas, alinear el icono, centra el dibujo de manera horizontal dentro del círculo y el otro verticalmente, y deja espacio para que no se pegue con los valores */
+.servicio .icono {
+    height: 12rem;
+    width: 12rem;
+    background-color: var(--CremaClaro);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* este es el texto que puse como la descripción que usé, line-height es espacio entre las líneas, esté centrado el texto, el color de las letras y el tamaño de la letra */
+.servicio p {
+    line-height: 1.8;
+    text-align: center;
+    color: var(--CafeMedio);
+    font-size: 1.4rem;
+}
+
+/* 1.3 CARRUSEL DE PRODUCTOS 
+margin-top es el primero ya que es la separación con los otros, margin-bottom es para dejar separación abajo y padding es para dejar espacio de los lados */
+.seccion-carrusel {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 0 1.5rem;
+}
+
+/* como tal la caja del carrusel, que ocupe el ancho del contenedor, position es para que ninguna cosa se mueva fuera de la caja como tal que todo se quede adentro */
+.carrusel-contenedor {
+    width: 100%;
+    position: relative;
+}
+
+/* moverlas para los lados, display que esté de manera horizontal, gap dejar la separación entre cada tarjeta, overflow-x es para deslizar si no se pueden ver todas, scroll deslizar rápido, padding dejar espacio para que se vean todas las imágenes */
+.carrusel-pista {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 2rem;
+}
+
+/* el tamaño como tal de la barra de abajo y el tamaño */
+.carrusel-pista::-webkit-scrollbar {
+    height: 6px;
+}
+
+/* este se encarga de que se vea bonita la barra para el scroll, desde el color y las puntas que están redondeadas */
+.carrusel-pista::-webkit-scrollbar-thumb {
+    background-color: var(--secundario);
+    border-radius: 1rem;
+}
+
+/* este es para cada una con la imagen y el texto, flex este es para que cuando esté en el celular se puedan ver cada tarjeta en el porcentaje que le puse, scroll-snap-align es que esté en el centro, position es para que no se encime la foto y el texto como tal, redondear las esquinas, overflow es para que la foto no se salga de la tarjeta, altura que quiero que tengan como tal, box-shadow no más por inventada la neta es para que se vea bonito que no se vea tosco en cuanto a la sombra que parezcan que no están pegadas */
+.carrusel-slide {
+    flex: 0 0 70%;
+    scroll-snap-align: center;
+    position: relative;
+    border-radius: 1.8rem;
+    overflow: hidden;
+    height: 40rem;
+    background-color: var(--blanco);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* este lo puse para computadoras, flex es para que se puedan ver las 3 tarjetas a la vez */
+@media (min-width: 768px) {
+    .carrusel-slide {
+        flex: 0 0 calc(33.333% - 1.4rem);
+    }
+}
+
+/* imagen de cada tarjeta, llene lo ancho y largo, llene todo el espacio sin que se pixelee, elimine cada parte que está en blanco */
+.carrusel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* información de cada tarjeta, primero que se ponga arriba de la imagen, que el botón que está en la izquierda que quede fijamente, el ancho de la tarjeta, deje un espacio o sea que no se vea al ras, que se vea un degradado para que las letras se vean */
+.carrusel-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    background: linear-gradient(to top, rgba(44, 39, 37, 0.7) 0%, transparent 100%);
+}
+
+/* Ponerles el nombre a cada producto, color blanco, tamaño de la letra que las ponga en negritas, márgenes afuera para que no se desacomoden como tal y el texto esté alineado */
+.carrusel-titulo {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: 600; 
+    margin: 0;
+    text-align: left;
+}
+
+/* 1.4 FORMULARIO para conocernos más */
+.seccion-formulario {
+    padding: 2rem 1.5rem;
+}
+
+.formulario { 
+/* Width es para que ocupe el ancho y que nunca se corte como tal, margin es para centrar horizontalmente y que sea equivalente a ambos lados */
+    background-color: var(--CremaClaro);
+    width: min(60rem, 100%); 
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+}
+
+/* es para todo lo que puse adentro o sea el texto y los recuadros de respuesta y que no sea como tan tosco en cuanto a los márgenes */
+.formulario fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* este es para el título, centrado, tamaño de letra, que se convierta en mayúsculas y en negritas, dejando un espacio y en color café */
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--oscuro);
+}
+
+/* Este es para cada uno y es para que las etiquetas estén juntas para escribir */
+.campo {
+    margin-bottom: 1.5rem;
+}
+
+/* este es para contestar o las letritas que están para escribir, letras de color en negritas se diferencien, margin dejar espacio abajo para donde se escriba, el recuadro esté abajo del texto, letra y alineada */
+.campo label {
+    color: var(--oscuro);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    display: block;
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+/* este es para el texto, ancho completo, poner un borde para que se vea la orilla, poner una separación para que no se vea todo pegado a la hora de escribir, redondear esquinas. */
+.input-text {
+    width: 100%;
+    border: 1px solid var(--CremaOscuro);
+    padding: 1.4rem;
+    border-radius: 0.8rem;
+    background-color: var(--blanco);
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: var(--oscuro);
+}
+
+/* este es para cuéntanos más, la altura y que se pueda mover de la esquina ya sea para que esté grande o esté pequeño y se estira a los lados según tu preferencia */
+.campo textarea {
+    height: 15rem;
+    resize: vertical;
+}
+
+.enviar .boton {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* 1.5 NOTICIAS
+hice primero la separación para que no esté pegado todo y dejar un margen de abajo y de los lados */
+.seccion-noticias {
+    padding: 2rem 1.5rem;
+}
+
+/* poner los contenedores para las noticias, grid es para que no más se haga una columna, gap una separación */
+.grid-noticias {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+/* para acomodarlas en computadora y que las tres se vean */
+@media (min-width: 768px) {
+    .grid-noticias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* overflow es recortar lo que le sobra a la imagen pero respetando las esquinas */
+.tarjeta-noticia {
+    background-color: var(--blanco);
+    border: 1px solid var(--CremaOscuro);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.noticia-img {
+    width: 100%;
+    height: 22rem;
+    overflow: hidden;
+}
+
+/* object-fit ajusta y recorta para que no se deforme, y display es para eliminar como el espacio que me quedaba abajo */
+.noticia-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* flex-grow es para que se estire y complete como tal el espacio */
+.noticia-cuerpo {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* la noticia como tal */
+.noticia-titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    text-align: left;
+    margin: 0 0 1rem 0;
+}
+
+/* las letras de abajo de la noticia, flex-grow es el enlace de leer más y que todos queden iguales */
+.noticia-resumen {
+    font-size: 1.3rem;
+    color: var(--CafeMedio);
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+    flex-grow: 1;
+}
+
+/* el enlace de leer más, texto es para quitar la línea azul, align-self es alinear el enlace */
+.noticia-link {
+    font-size: 1.3rem;
+    color: var(--CafeClarito);
+    font-weight: 700;
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+/* este es para que el enlace tenga la línea de abajo y llame más la atención a mi parecer */
+.noticia-link:hover {
+    text-decoration: underline;
+}
+
+/* 1.6 Comentarios de clientas */
+.seccion-testimonios {
+    padding: 2rem 1.5rem;
+}
+
+/* la caja donde están puestas, grid esta vez es solo una columna y aplica para lo de abajo en sí el comentario, gap separación */
+.grid-testimonios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid-testimonios {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* flex-direction es para alinear los elementos en una columna que mis estrellas estén arriba, el texto en medio y quien lo dice abajo, box es para la sombra */
+.tarjeta-testimonio {
+    background-color: var(--blanco);
+    border: 1px solid var(--CremaOscuro);
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* letter es espacio entre las estrellas para que no se junten */
+.testimonio-estrellas {
+    font-size: 1.6rem;
+    color: var(--CafeClarito);
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+/* line es para poderla leer a gusto, margin cero de márgenes pero que abajo sí se deje espacio, flex-grow es para que se vea la información casi igual */
+.testimonio-texto {
+    font-size: 1.4rem;
+    color: var(--oscuro);
+    line-height: 1.6;
+    font-style: italic;
+    margin: 0 0 2rem 0;
+    flex-grow: 1;
+}
+
+/* información de nuestros clientes, border-top es para que se vean separadas las cajas */
+.testimonio-autor {
+    border-top: 1px solid var(--CremaClaro);
+    padding-top: 1.2rem;
+}
+
+/* margin es para que no se mueva nada */
+.autor-nombre {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    margin: 0; 
+}
+
+.verificado {
+    font-size: 1.1rem;
+    color: var(--secundario);
+    font-weight: 500;
+}
+
+.producto-usado {
+    font-size: 1.1rem;
+    color: var(--CafeMedio);
+}
+
+/* 1.7 aside o sea los enlaces y línea como tal */
+.aside-horizontal {
+    padding: 0 1.5rem;
+}
+
+/* fondo, borde, esquinas, lo interno del contenedor, acomodo, centrado, espacio */
+.aside-horizontal__contenedor {
+    background-color: var(--CremaOscuro);
+    border: 1px solid var(--CafeClarito);
+    border-radius: 1.5rem;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* 1 fila, título a la izquierda y los links a la derecha */
+@media (min-width: 768px) {
+    .aside-horizontal__contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* tamaño, color, el margen que ya puse desde arriba, mayúsculas, negritas */
+.aside-horizontal__titulo {
+    font-size: 1.6rem;
+    color: var(--oscuro);
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* está como ul, afuera las viñetas, se acomodan como tal en lista, acomoda en horizontal, flex-wrap es por si llego a poner más enlaces sigan en la misma fila */
+.aside-horizontal__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* links */
+.aside-horizontal__lista a {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+/* el color que le otorgué cuando le picas */
+.aside-horizontal__lista a:hover {
+    color: var(--negro);
+}
+
+/* 2. SKIN */ 
+/* 2.1 SKIN lo primero que ves, espacio arriba, derecha, abajo e izquierda y todo bien centrado */
+.skin-banner {
+    padding: 6rem 2rem 3rem 2rem;
+    text-align: center;
+}
+
+/* texto del banner, puse un ancho para que no se me descuadre, que esté centrada */
+.skin-banner__texto {
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+/* el letrero que puse de cuidado facial o nueva línea, display que cumpla su función más aparte la imagen esté bien, margin es para el espacio de abajo para que se despegue del título */
+.skin-banner .subetiqueta {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--CafeClarito);
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* lo principal del banner */
+.skin-banner h2 {
+    font-size: 3.6rem;
+    color: var(--oscuro);
+    margin-bottom: 1.5rem;
+}
+
+/* p es texto mayormente yo lo ocupé para la información */
+.skin-banner p {
+    font-size: 1.6rem;
+    color: var(--CafeMedio);
+    line-height: 1.8;
+}
+
+/* 2.2 PRODUCTOS */
+.seccion-productos {
+    padding: 2rem 1.5rem 6rem 1.5rem;
+}
+
+/* tamaño, espacio para las tarjetas, color */
+.subtitulo-seccion {
+    font-size: 2.8rem;
+    margin-bottom: 3.5rem;
+    color: var(--oscuro);
+}
+
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+/* 3 tarjetas en una sola fila, computadora */
+@media (min-width: 820px) {
+    .grid-tarjetas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* estructura de las 3, posición para que no se salga, redondear, overflow cortar imagen para que las esquinas estén redondeadas, min-height es para la altura de la imagen, fondo, justify-content títulos arriba y el botón al final */
+.tarjeta {
+    position: relative;
+    border-radius: 1.8rem;
+    overflow: hidden;
+    min-height: 48rem;
+    background-color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* franja adentro, alinear, separar los extremos de izquierda a derecha, centrar vertical, padding que se vea como una camita, z-index pone el texto encima de la imagen para que no quede abajo como tal y se vea atrapada */
+.tarjeta__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    z-index: 2;
+}
+
+/* número, letra, negrita, café y junta letras pero no tan feamente */
+.tarjeta__etiqueta {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--CafeClarito);
+    letter-spacing: -1px;
+}
+
+/* Tarjeta 1 que cubra todo, centrada */
+.tarjeta--foto {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Tarjeta 2: fondo, centrada y ajustada la imagen, que las letras estén en la parte de abajo */
+.tarjeta--premio {
+    background-color: var(--CremaClaro);
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+}
+
+.tarjeta__contenido-premio {
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.premio__titulo {
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: var(--oscuro);
+    text-align: left;
+    margin: 0;
+}
+
+/* botón de ¿qué es?, que sea transparente, esté ajustado, que esté de grosor, borde, color, bordes redondos, letras color, tamaño letra, quita relleno, seminegritas, que el botón se acople a la tarjeta, el efecto de picarle y el color */
+.boton-outline {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    border: 1px solid var(--oscuro);
+    border-radius: 2rem;
+    color: var(--oscuro);
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+    width: fit-content;
+}
+
+/* efecto de tocarle */
+.boton-outline:hover {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+}
+
+/* Tarjeta 3 */
+.tarjeta--producto {
+    background-color: var(--CremaClaro);
+}
+
+/* la imagen, ocupe todo, centrada horizontal y verticalmente, espacio, la imagen, la altura, calcula el ancho, no se vea con recortes ni deforme */
+.tarjeta__imagen-prod {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.tarjeta__imagen-prod img {
+    max-height: 40rem;
+    max-width: 90%;
+    width: auto;
+    object-fit: contain;
+}
+
+/* 2.3 preguntas frecuentes, separación anterior, libre para abajo */
+.seccion-ingredientes {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+
+/* contenedor para poner las preguntas, poner una columna, con separación entre unos y otros */
+.grid-ingredientes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .grid-ingredientes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* esta puse el número, título y descripción de manera vertical, y un grosor */
+.ingrediente-item {
+    text-align: center;
+    padding: 1rem;
+}
+
+/* tamaño, negrita, color de letra, display que el título se vaya para abajo, una separación */
+.ingrediente-item .numero {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--secundario);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.ingrediente-item h3 {
+    font-size: 2rem;
+    color: var(--oscuro);
+    margin-bottom: 1rem;
+}
+
+.ingrediente-item p {
+    font-size: 1.4rem;
+    color: var(--CafeMedio);
+    line-height: 1.7;
+}
+
+/* 3. COMBOS */ 
+/* 3.1 combos lo de abajo es que casi todas tienen lo mismo */
+
+/* 3.2 tarjetas de los combos 
+fondo, contorno, redondear, cortar cualquier cosa que salga, ordenar, acomodar cada elemento verticalmente, insignia, imagen en medio y los datos, que las cosas estén hacia arriba y abajo de la tarjeta, sombra y altura */
+.tarjeta-combo {
+    background-color: var(--blanco);
+    border: 1px solid var(--CremaOscuro);
+    border-radius: 1.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    min-height: 45rem;
+}
+
+/* etiqueta, fondo, color, letras en blanco, que esté grueso, bordes, tamaño de letra, seminegrita, que todo el texto aparezca en minúsculas */
+.badge-numia {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    padding: 0.4rem 1.2rem;
+    border-radius: 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+/* imagen, el espacio que hay en el centro sin ocupar, centrada a la derecha, imagen de arriba y abajo, margen, que la imagen no se extienda de más */
+.tarjeta__imagen-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+/* ancho del contenedor, tope de altura, mantiene la proporción original y se mantiene tal cual, se vea completo, quita el espacio que ya no sirve */
+.tarjeta__imagen-box img {
+    max-width: 100%;
+    max-height: 25rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* donde está escrita la descripción */
+.tarjeta__pie-simple {
+    padding: 1.5rem 2rem 2.5rem 2rem;
+    text-align: left;
+}
+
+/* nombre del combo */
+.tarjeta__pie-simple h4 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    margin: 0 0 0.5rem 0;
+}
+
+.tarjeta__pie-simple p {
+    font-size: 1.2rem;
+    color: var(--CafeMedio);
+    margin: 0;
+}
+
+/* 3.3 formulario de combos
+lista que se despliega de qué tipo de combo, fondo blanco, la letra desde un inicio, tamaño del texto, letras cafés, outline: none es para quitar lo que aparece al hacer clic */
+.select-custom {
+    background-color: var(--blanco);
+    font-family: inherit;
+    font-size: 1.4rem;
+    color: var(--oscuro);
+    outline: none;
+    cursor: pointer;
+}
+
+/* 4. PRONTO */
+/* 4.1 cuenta regresiva lo de la parte de arriba, margin: espacio arriba y abajo pero no a los lados */
+.drop-titulo {
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+/* cajita donde están los números, acomodados en una sola línea horizontal, centrados, alineados tanto los números como los puntos, separación entre cada uno, separados hacia abajo */
+.cuenta-regresiva {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* min-width es para el ancho de las cajitas */
+.caja-tiempo {
+    background-color: var(--blanco);
+    border-radius: 1.2rem;
+    padding: 1.5rem 2rem;
+    min-width: 8.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* display que ocupe su espacio y que la etiqueta esté hacia abajo, elimine el espacio extra arriba y abajo estén centrados los números */
+.numero-tiempo {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--oscuro);
+    display: block;
+    line-height: 1;
+}
+
+.etiqueta-tiempo {
+    font-size: 1.1rem;
+    color: var(--CafeMedio);
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.separador-tiempo {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--secundario);
+}
+
+/* 4.2 los próximos drop */
+.seccion-imagen-drop {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-drop-completa {
+    width: 100%;
+    max-width: 110rem;
+    height: auto;
+    border-radius: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: block;
+}
+
+/* 4.3 acceso VIP, degradado de fondo más el cuadro este de arriba y a los lados */
+.waitlist-seccion {
+    background-image: linear-gradient(to bottom, var(--blanco), var(--CremaClaro));
+    padding: 5rem 2rem;
+}
+
+/* que el ancho del formulario no se estire de más y centrado el formulario horizontalmente */
+.formulario-waitlist { 
+    max-width: 55rem;
+    margin: 0 auto;
+}
+
+.campo-waitlist {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* pantallas más anchas más aparte que donde ponen el correo y el botón estén en una sola línea horizontal */
+@media (min-width: 580px) {
+    .campo-waitlist {
+        flex-direction: row;
+    }
+
+    /* que el botón no más ocupe lo necesario, no se puede que el botón esté en 2 renglones esto para que esté en una sola línea */
+    .boton--drop {
+        width: auto;
+        white-space: nowrap;
+        margin-top: 0;
+    }
+}
+
+/* lo de abajo */
+.texto-privacidad {
+    font-size: 1.2rem;
+    color: var(--CafeMedio);
+    display: block;
+    margin-top: 1.2rem;
+}
+
+/* footer y las redes sociales 
+es la etiqueta que siempre está en el pie de mi página, centra todos los textos, iconos y que es mía, una separación de arriba y abajo */
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem 0;
+}
+
+.Redes-Sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* transition es para que salten las imágenes cuando pases o le piques */
+.Redes-Sociales a {
+    color: var(--oscuro);
+    display: inline-flex;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* que brinquen cuando lo pasas, eleve los iconos */
+.Redes-Sociales a:hover {
+    color: var(--CafeClarito);
+    transform: translateY(-3px);
+}
+
+/* clase de utilidades, cosas que repetí mucho y para no ponerlas más:
+texto centrado, texto alineado a la izquierda y alineado a la derecha */ 
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* 1 es todo mayúsculas, 2 pone en negritas y el 3 que no esté tan fuerte el color */
+.uppercase { text-transform: uppercase; }
+.text-bold { font-weight: 700; }
+.text-muted { color: var(--CafeMedio); }
+
+/* márgenes de arriba pequeño, mediano y grande, y los demás son de abajo de la misma manera y el de auto es para las cajas que puse de manera horizontal obviamente poniéndole lo que vendría siendo los márgenes */
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-5 { margin-top: 5rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-4 { margin-bottom: 4rem; }
+.mb-5 { margin-bottom: 5rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+
+/* 1 que ocupe todo el espacio, 2 este le reduce el ancho, 3 este se acomoda y siempre lo puso en medio de ambos lados, 4 centra todo lo principal, 5 este creo que los centra para que quede parejo todo */
+.w-100 { width: 100%; }  
+.max-w-60 { max-width: 60rem; }
+.d-flex { display: flex; } 
+.flex-column { flex-direction: column; } 
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }

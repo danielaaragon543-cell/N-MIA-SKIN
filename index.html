@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- este pues vendria siendo para que se ponga al ancho de cualquier pantalla como celular o compu -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NÜMIA SKIN - Cuidado Facial Esencial</title>
+    <!-- link es la etiqueta que conecta este html con la hoja de estilos de css para que agarre todos los colores y diseños que puse -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body> 
+
+    <!-- header es lo principal de la pagina y la puse en la parte de mero arriba para la identidad -->
+    <header>
+        <!-- h1 es el titulo principal y mas grandote de toda la pagina para que se vea el nombre de la marca -->
+        <h1 class="titulo">
+            NÜMIA 
+            <!-- span es una etiqueta de texto en linea que sirve para separar la palabra skin y cambiarle el tamaño sin que se baje de renglon -->
+            <span> SKIN </span>
+        </h1>
+    </header>
+
+    <!-- div con clase nav-bg es la caja que pinta toda la franja de color beige detras del menu -->
+    <div class="nav-bg">
+        <!-- nav es la etiqueta de navegacion que envuelve toda la barra donde puse los enlaces principales -->
+        <nav class="navegacion-principal contenedor">
+            <!-- las etiquetas a con href son los enlaces interactivos a los que les picas para irte a las demas paginas -->
+            <a href="index.html">CONÓCENOS</a>
+            <a href="pages/SKIN.html">SKIN</a>
+            <a href="pages/COMBOS.html">COMBOS</a>
+            <a href="pages/PRONTO.html">PRONTO</a>
+        </nav>
+    </div> 
+
+    <!-- main es la etiqueta que guarda todo el contenido mas importante -->
+    <main>
+        <!-- section hero es la seccion de la portada principal grandota con la foto de fondo-->
+        <section class="hero">
+            <!-- contenido hero es la caja negra transparente para que el texto de encima no se pierda con la imagen  -->
+            <div class="contenido-hero">
+                <!-- h2 es el subtitulo grande que puse centrado para la frase principal de confianza -->
+                <h2 class="subtitulo">TU SKINCARE DE CONFIANZA</h2>
+
+                <!-- svg es el  icono de ubicacion para que se vea clarito en cualquier pantalla -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" viewBox="0 0 24 24" fill="none" stroke="#FFFDFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0" /></svg>
+                
+                <!-- p es texto normal de parrafo para poner la ciudad de aguascalientes en color blanco -->
+                <p class="place">Aguascalientes, Ags.</p>
+                <!-- este boton es un enlace que te abre la ubicacion exacta en google maps en una pestaña de ubicacion-->
+                <a href="https://maps.app.goo.gl/GEkenirEZV4ZG7DV7" class="place boton" target="_blank" rel="noopener">Ubicación</a>
+            </div>
+        </section>
+
+        <!-- seccion con el cuadro blanco con sombra y el margen mb-5 para que no se pegue con lo de abajo -->
+        <section class="contenedor sombra mb-5">
+            <!-- subtitulo h2 centrado para presentar la parte de conocenos -->
+            <h2>CONÓCENOS UN POCO MÁS</h2>
+
+            <!-- servicios es la caja grid que pone una sola columna en celular y tres columnas en computadora-->
+            <div class="servicios">
+                <!-- article es la tarjeta individual para el primer valor de la marca -->
+                <article class="servicio">
+                    <!-- h3 es el titulo chico de la tarjeta para valores -->
+                    <h3>VALORES</h3>
+                    <!-- div icono es el circulo redondito crema donde puse adentro el dibujo -->
+                    <div class="icono">
+                        <!-- svg del telefono con corazon para representar los valores y la atencion -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-device-mobile-heart">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M11.5 21h-3.5a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v6" />
+                            <path d="M11 4h2" />
+                            <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296" />
+                        </svg>
+                    </div>
+                    <!-- p es la descripcion de los valores con el interlineado comodo para leer -->
+                    <p>En NÜMIA acompañamos tu evolución revelando la versión más saludable de tu piel, a través de fórmulas honestas y transparentes que te dicen con claridad qué aplicas y por qué funciona.</p>
+                </article>
+
+                <!-- article para la segunda tarjeta individual de la propuesta de productos -->
+                <article class="servicio">
+                    <!-- titulo h3 de productos para mantener el mismo orden -->
+                    <h3>PRODUCTOS</h3>
+                    <div class="icono">
+                        <!-- icono svg de estrella para los productos -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-carambola">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M17.286 21.09q -1.69 .001 -5.288 -2.615q -3.596 2.617 -5.288 2.616q -2.726 0 -.495 -6.8q -9.389 -6.775 2.135 -6.775h.076q 1.785 -5.516 3.574 -5.516q 1.785 0 3.574 5.516h.076q 11.525 0 2.133 6.774q 2.23 6.802 -.497 6.8" />
+                        </svg>
+                    </div>
+                    <!-- parrafo que explica como cuidan la piel los productos -->
+                    <p>Nuestras fórmulas fortalecen e hidratan tu piel para protegerla de la contaminación y el sol, suavizando la textura para devolverte un brillo natural y fresco sin saturar tu piel.</p>
+                </article>
+
+                <!-- article es para separar de las formulas -->
+                <article class="servicio">
+                    <!-- h3 de formulas -->
+                    <h3>FÓRMULAS</h3>
+                    <div class="icono">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#212121" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chart-dots-3">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 7a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M14 15a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M15 6a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                            <path d="M3 18a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                            <path d="M6 7l5 1.5" /> 
+                            <path d="M9 17l5 -1.5" />
+                            <path d="M6.5 8.5l7.81 5.37" />
+                            <path d="M7 7l8 -1" />
+                        </svg>
+                    </div>
+                    <p>Unimos la ciencia del ácido hialurónico y los péptidos con el poder calmante de extractos botánicos naturales, creando un cuidado profundo, libre de parabenos y sulfatos.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- seccion del carrusel de productos estrella  -->
+        <section class="contenedor seccion-carrusel mb-5">
+            <!-- titulo h2 centrado usando la clase de utilidad text-center -->
+            <h2 class="text-center">PRODUCTOS ESTRELLA</h2>
+            <!-- parrafo centrado con texto en tono cafe bajito -->
+            <p class="text-center text-muted mb-4">Desliza para descubrir lo que tenemos para ti.</p>
+
+            <!-- carrusel-contenedor es la caja que envuelve la tira que desliza -->
+            <div class="carrusel-contenedor">
+                <!-- carrusel pista es la fila horizontal con scroll que te deja deslizar las fotos de lado a lado -->
+                <div class="carrusel-pista">
+                    <!-- cada slide es un article que funciona como una tarjeta del carrusel -->
+                    <article class="carrusel-slide">
+                        <!-- img es la foto del producto que se adapta a todo el alto sin deformarse -->
+                        <img src="img/TARJETA1.png" alt="Rutina Glaze">
+                        <!-- carrusel-info es la franja de abajo de la imagen -->
+                        <div class="carrusel-info">
+                            <!-- parrafo con el nombre del producto en color blanco -->
+                            <p class="carrusel-titulo">Rutina Glaze</p>
+                        </div>
+                    </article>
+
+                    <!-- tarjeta del segundo producto del carrusel -->
+                    <article class="carrusel-slide">
+                        <img src="img/COMBOSKIT1.jpg" alt="Esenciales de Viaje">
+                        <div class="carrusel-info">
+                            <p class="carrusel-titulo">Esenciales de Viaje</p>
+                        </div>
+                    </article>
+
+                    <!-- tarjeta del tercer producto del carrusel -->
+                    <article class="carrusel-slide">
+                        <img src="img/COMBOSKIT2.jpg" alt="Textura y Mantequilla">
+                        <div class="carrusel-info">
+                            <p class="carrusel-titulo">Textura & Mantequilla</p>
+                        </div>
+                    </article>
+
+                    <!-- tarjeta del cuarto producto del carrusel -->
+                    <article class="carrusel-slide">
+                        <img src="img/TARJETA4.jpg" alt="Brillo Natural">
+                        <div class="carrusel-info">
+                            <p class="carrusel-titulo">Brillo Natural</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- seccion para el diario numia y las notas -->
+        <section class="contenedor seccion-noticias mb-5">
+            <div class="text-center mb-4">
+                <span class="subetiqueta uppercase text-bold">El Diario NÜMIA</span>
+                <!-- titulo h2 de la seccion de noticias -->
+                <h2>Noticias que te sorprenderán</h2>
+                <p class="text-muted max-w-60 mx-auto">Conoce las últimas menciones, lanzamientos y consejos para el cuidado de tu piel con las mejores páginas.</p>
+            </div>
+
+            <!-- grid que acomoda las tres tarjetas de noticias en columnas -->
+            <div class="grid-noticias">
+                <!-- article para la primera noticia de revista -->
+                <article class="tarjeta-noticia">
+                    <!-- caja donde va la foto recortada arriba con esquinas redondeadas -->
+                    <div class="noticia-img">
+                        <!-- gif o imagen que llena todo el espacio sin deformarse -->
+                        <img src="img/NOTICIA1.gif" alt="Mención en revista">
+                    </div>
+                    <!-- noticia cuerpo es el contenedor blanco con el texto y el enlace -->
+                    <div class="noticia-cuerpo">
+                        <!-- h3 con el titulo de la nota de vogue -->
+                        <h3 class="noticia-titulo">¿Qué lleva en su neceser de otoño la redacción de ‘Vogue’ México?</h3>
+                        <!-- resumen de la nota en letra mas chica -->
+                        <p class="noticia-resumen">Todos nuestros imprescindibles en materia de belleza desde septiembre hasta diciembre.</p>
+                        <!-- enlace directo al articulo original que abre en otra pestaña con target blank -->
+                        <a href="https://www.vogue.es/articulos/neceser-otono-vogue-productos-favoritos-belleza" class="noticia-link" target="_blank" rel="noopener">Leer nota completa →</a>
+                    </div>
+                </article>
+
+                <!-- article para la segunda noticia de elle -->
+                <article class="tarjeta-noticia">
+                    <div class="noticia-img">
+                        <img src="img/NOTICIA2.webp" alt="Lanzamiento de producto">
+                    </div>
+                    <div class="noticia-cuerpo">
+                        <h3 class="noticia-titulo">¿Te digo un secreto? Una buena rutina de skincare solo necesita 3 pasos</h3>
+                        <p class="noticia-resumen">Naturium llega a México para enseñarnos el poder de una rutina minimalista.</p>
+                        <a href="https://elle.mx/belleza/2026/09/09/te-digo-un-secreto-una-buena-rutina-de-skincare-solo-necesita-3-pasos" class="noticia-link" target="_blank" rel="noopener">Leer nota completa →</a>
+                    </div>
+                </article>
+
+                <!-- article para la tercera noticia del kit de viaje -->
+                <article class="tarjeta-noticia">
+                    <div class="noticia-img">
+                        <img src="img/NOTICIA3.webp" alt="Nuevo set de viaje">
+                    </div>
+                    <div class="noticia-cuerpo">
+                        <h3 class="noticia-titulo">El kit beauty que necesitas empacar para ir de viaje.</h3>
+                        <p class="noticia-resumen">Y verte bien sin importar el tipo de clima y evento que tengas.</p>
+                        <a href="https://www.vogue.mx/belleza/editors-pick/articulos/kit-de-belleza-para-viaje-productos/14223" class="noticia-link" target="_blank" rel="noopener">Leer nota completa →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- seccion de personas que ya probaron los productos -->
+        <section class="contenedor seccion-testimonios mb-5">
+            <!-- encabezado de la seccion -->
+            <div class="text-center mb-4">
+                <span class="subetiqueta uppercase text-bold">Comunidad NÜMIA</span>
+                <h2>Lo Que Dicen de Nosotros</h2>
+                <p class="text-muted max-w-60 mx-auto">Experiencias reales de personas que transformaron su ritual diario con nuestras fórmulas.</p>
+            </div>
+
+            <div class="grid-testimonios">
+                <!-- article de la primera tarjeta de testimonio -->
+                <article class="tarjeta-testimonio">
+                    <div class="testimonio-estrellas">★★★★★</div>
+                    <!-- parrafo en cursiva con la opinion de la clienta -->
+                    <p class="testimonio-texto">"Tenía miedo de que la crema fuera muy pesada para mi piel mixta, pero la textura tipo mantequilla se absorbe al instante y me deja un brillo muy saludable todo el día."</p>
+                    <!-- testimonio-autor es la cajita de abajo con la linea de separacion -->
+                    <div class="testimonio-autor">
+                        <p class="autor-nombre">Valeria M. <span class="verificado">✓ Compra verificada</span></p>
+                        <!-- texto chico que dice cual producto fue el que uso -->
+                        <p class="producto-usado">Usó: Crema de Mantequilla</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-testimonio">
+                    <div class="testimonio-estrellas">★★★★★</div>
+                    <p class="testimonio-texto">"El kit de viaje me salvó en mis vacaciones. El tamaño es perfecto para el bolso y los productos mantienen la hidratación incluso con el aire acondicionado de los aviones."</p>
+                    <div class="testimonio-autor">
+                        <p class="autor-nombre">Camila R. <span class="verificado">✓ Compra verificada</span></p>
+                        <p class="producto-usado">Usó: Set de Viaje</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-testimonio">
+                    <div class="testimonio-estrellas">★★★★★</div>
+                    <p class="testimonio-texto">"La leche resaltadora es de mis favoritas para antes del maquillaje. Deja la piel con un efecto glaseado sin sentirse grasosa ni tapar los poros."</p>
+                    <div class="testimonio-autor">
+                        <p class="autor-nombre">Sofía G. <span class="verificado">✓ Compra verificada</span></p>
+                        <p class="producto-usado">Usó: Leche Resaltadora</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- aside es la barra complementaria de enlaces rapidos que va antes de terminar el main -->
+        <aside class="contenedor aside-horizontal mb-5">
+            <!-- caja con fondo crema oscuro y borde cafe -->
+            <div class="aside-horizontal__contenedor">
+                <!-- titulo en mayusculas para enlaces rapidos -->
+                <h3 class="aside-horizontal__titulo">Enlaces Rápidos</h3>
+                <!-- ul es la lista desordenada donde acomode los enlaces en una sola linea horizontal -->
+                <ul class="aside-horizontal__lista">
+                    <!-- cada li es un elemento de la lista sin viñetas con su enlace a -->
+                    <li><a href="pages/SKIN.html">Nuestra Rutina</a></li>
+                    <li><a href="pages/COMBOS.html">Combos en Descuento</a></li>
+                    <li><a href="pages/PRONTO.html">Próximos Lanzamientos</a></li>
+                    <li><a href="pages/SKIN.html#preguntas">Preguntas Frecuentes</a></li>
+                    <li><a href="https://maps.app.goo.gl/GEkenirEZV4ZG7DV7" target="_blank" rel="noopener">Nuestra Tienda Física</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+      <!-- seccion para el formulario de contacto de la tienda -->
+        <section class="contenedor seccion-formulario mb-5">
+            <!-- form es el formulario completo donde las clientas llenan sus datos -->
+            <form class="formulario">
+                <!-- fieldset es la caja que agrupa todos los campos para que se vean ordenados y sin bordes feos -->
+                <fieldset>
+                    <!-- legend es el titulo  del formulario que sale centrado en negritas y mayusculas -->
+                    <legend>¡HORA DE CONOCERNOS!</legend>
+
+                    <!-- caja contenedora para ordenar los renglones del formulario -->
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <!-- label es el letrero que le dice al usuario que escriba su nombre -->
+                            <label>Introduce tu nombre</label>
+                            <!-- input tipo texto es el recuadro blanco para escribir con require para que sea obligatorio -->
+                            <input type="text" class="input-text" placeholder="Aquí va tu nombre" required>
+                        </div>
+
+                        <!-- campo para el numero telefonico -->
+                        <div class="campo">
+                            <label>Teléfono</label>
+                            <!-- input tipo tel para que en el celular salga el teclado numerico -->
+                            <input class="input-text" type="tel" placeholder="Aquí va tu teléfono">
+                        </div>
+
+                        <!-- campo para el correo electronico -->
+                        <div class="campo">
+                            <label>Correo</label>
+                            <!-- input tipo email que revisa solito que lleve arroba y punto -->
+                            <input class="input-text" type="email" placeholder="Escribe tu email" required>
+                        </div>
+
+                        <!-- campo para el mensaje del tipo de piel -->
+                        <div class="campo">
+                            <label>¡Cuéntanos qué tipo de piel tienes!</label>
+                            <!-- textarea es la caja de texto mas grande para mensajes largos que se puede jalar hacia abajo -->
+                            <textarea class="input-text" placeholder="Escribe aquí tu mensaje"></textarea>
+                        </div>
+
+                        <!-- div que contiene el boton de enviar -->
+                        <div class="enviar">
+                            <!-- input tipo submit es el boton grandote que ocupa todo el ancho con w-100 para mandar el formulario -->
+                            <input type="submit" class="boton w-100" value="Enviar">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+    <!-- footer es lo de mero a abajo donde estan todas mis redes sociales-->
+    <footer>
+        <div class="Redes-Sociales">
+            <!-- enlace de instagram con icono svg que brinca hacia arriba al pasar el cursor -->
+            <a href="https://www.instagram.com/esparzaaragon" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4l0 -8"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M16.5 7.5v.01"/></svg>
+            </a>
+            <!-- enlace de facebook -->
+            <a href="https://www.facebook.com/share/1ZCRbCzk3D/" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"/></svg>
+            </a>
+            <!-- enlace de linkedin -->
+            <a href="https://www.linkedin.com/in/karla-daniela-esparza-aragon-255307413/" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 1 0 -4 0"/><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10"/></svg>
+            </a>
+            <!-- enlace de tiktok -->
+            <a href="https://www.tiktok.com/@karla_arag?_r=1&_t=ZS-998hCwXLI4e" aria-label="TikTok">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917"/></svg>
+            </a>
+        </div>
+        <p>Todos los derechos reservados. Karla Esparza</p>
+    </footer>
+<!-- section: Divide la página por temas grandes, article: Es la unidad individual dentro de esa sección, div: Es una caja sin significado se usa para diseño visual, colores o acomodo. -->
+</body>
+</html>
